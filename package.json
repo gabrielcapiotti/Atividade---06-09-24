@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "npx ts-node-dev --respawn --transpile-only ./src/controller/user.controller.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,9 +12,14 @@
   "license": "ISC",
   "devDependencies": {
     "@prisma/client": "^5.18.0",
+    "@types/express": "^4.17.21",
     "@types/node": "^22.1.0",
     "prisma": "^5.18.0",
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }

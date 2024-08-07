@@ -25,7 +25,7 @@ model Usuario{
 model Produto {
   id Int @id @default(autoincrement())
   description String
-  valor Float
+  valor Int
   quantidadeEstoque Int
   productType String
   createdAt DateTime @default(now())
@@ -41,6 +41,7 @@ model Loja {
   quantidadeFiliais Int
   dataHoraAbertura DateTime
 }
+
 
 model Fornecedor{
   id Int @id @default(autoincrement())
