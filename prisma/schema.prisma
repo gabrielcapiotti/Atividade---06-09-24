@@ -18,17 +18,17 @@ model Usuario{
   nome String
   idade Int
   email String @unique
-  password String
+  senha String
   linkGithub String?
 }
 
 model Produto {
   id Int @id @default(autoincrement())
-  description String
+  descricao String
   valor Int
   quantidadeEstoque Int
-  productType String
-  createdAt DateTime @default(now())
+  ProductType String
+  createAt DateTime @default(now())
   disponivel Boolean? @default(true)
 }
 
