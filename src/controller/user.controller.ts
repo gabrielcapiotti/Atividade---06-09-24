@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import db from '../controller/database/prisma.connect';
 
-class UserController {
+class ListagemUsuário {
     public async ListaAlimentos(req: Request, res: Response) {
         try {
             const products = await db.produto.findMany({
@@ -73,4 +73,4 @@ class UserController {
     }
 }
 
-export default UserController;
+export default ListagemUsuário;
