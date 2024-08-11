@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import db from "../controller/database/prisma.connect";
 
-class UserController {
+class UsuarioController {
     public async list(req: Request, res: Response) {
         try {
             const users = await db.usuario.findMany();
@@ -95,4 +95,4 @@ class UserController {
     }
 }
 
-export { UserController };
+export { UsuarioController };

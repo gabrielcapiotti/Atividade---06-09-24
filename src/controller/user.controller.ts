@@ -7,10 +7,14 @@ class ListagemUsuário {
             const products = await db.produto.findMany({
                 where: { productType: 'A' }
             });
-            return res.status(200).json({ success: true, data: products });
+            return res
+                .status(200)
+                .json({ success: true, data: products });
         } catch (error) {
             console.error("Falha ao recuperar produtos alimentícios:", error);
-            return res.status(500).json({ success: false, msg: "Erro no banco de dados." });
+            return res
+                .status(500)
+                .json({ success: false, msg: "Erro no banco de dados." });
         }
     }
 
@@ -19,10 +23,14 @@ class ListagemUsuário {
             const products = await db.produto.findMany({
                 where: { valor: { gt: 10 } }
             });
-            return res.status(200).json({ success: true, data: products });
+            return res
+                .status(200)
+                .json({ success: true, data: products });
         } catch (error) {
             console.error("Falha ao recuperar produtos caros:", error);
-            return res.status(500).json({ success: false, msg: "Erro no banco de dados." });
+            return res
+                .status(500)
+                .json({ success: false, msg: "Erro no banco de dados." });
         }
     }
 
@@ -35,7 +43,9 @@ class ListagemUsuário {
             return res.status(200).json({ success: true, data: products });
         } catch (error) {
             console.error("Falha ao listar produtos disponíveis:", error);
-            return res.status(500).json({ success: false, msg: "Erro no banco de dados." });
+            return res
+                .status(500)
+                .json({ success: false, msg: "Erro no banco de dados." });
         }
     }
 
@@ -48,10 +58,14 @@ class ListagemUsuário {
                     ]
                 }
             });
-            return res.status(200).json({ success: true, data: stores });
+            return res
+                .status(200)
+                .json({ success: true, data: stores });
         } catch (error) {
             console.error("Falha ao recuperar lojas:", error);
-            return res.status(500).json({ success: false, msg: "Erro no banco de dados." });
+            return res
+                .status(500)
+                .json({ success: false, msg: "Erro no banco de dados." });
         }
     }
 
@@ -65,10 +79,14 @@ class ListagemUsuário {
                     }
                 }
             });
-            return res.status(200).json({ success: true, data: users });
+            return res
+                .status(200)
+                .json({ success: true, data: users });
         } catch (error) {
             console.error("Falha ao recuperar usuários:", error);
-            return res.status(500).json({ success: false, msg: "Erro no banco de dados." });
+            return res
+                .status(500)
+                .json({ success: false, msg: "Erro no banco de dados." });
         }
     }
 }
