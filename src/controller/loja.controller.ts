@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import db from '../controller/database/prisma.connect';  // Atualize o caminho conforme necessário
+import db from '../controller/database/prisma.connect';
 
 class LojaController {
     public async list(req: Request, res: Response) {
